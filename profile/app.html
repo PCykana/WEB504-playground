@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta Charset, viewpoint for mobile, and SEO tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Peter Cykana - Software Developer. Explore skills, projects, and contact information">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Cykana | Profile, Skills, & Projects</title>
+
+    <!--SEO: Open Graph for better social media sharing-->
+    <meta property="og:title" content="Peter Cykana | Profile, Skills, & Projects">
+    <meta property="og:description" content="Peter Cykana - Software Developer. Explore skills, projects, and contact information">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+
+   <!-- link to external CSS -->
+    <link rel="stylesheet" href="styles.css"
+</head>
+<body>
+    <!--Main, Headder, nav-->
+    <header class="sticky-header" role="banner">
+        <!--Site Title with id and keyboard Focus-->
+        <h1 id="main-title" tabindex="0">Pete's Profile</h1>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <!--target="_blank" opens link in a new tab, rel="noopener" for security-->
+                <li><a href="#contact" class="nav-link" target="_blank" rel="noopener">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main page content-->
+    <main id="main" tabindex="-1">
+        <!--About Me Section-->
+        <section id="about" class="card animated bounce-in" aria-labelledby="about-heading">
+            <!-- Alt text describes the image for screen readers -->
+            <div class="pulse-on-hover" tabindex="0"><img src="ChickenDad.png" alt="portrait of Chicken Dad" class="profile-img"></div>
+            <h2 id="about-heading">About me</h2>
+            <p><span class="highlight">What? Where? okay?</span></p>
+            <!--hobbies as an inline list-->
+            <ul class="hobbies">
+                <li>Gaming</li>
+                <li>Anime</li>
+                <li>Movies</li>
+                <li>buying nerd shit I don't need</li>
+            </ul>
+        </section>
+
+ <!-- Skills section, with flexbox layout and animated skill pills -->
+    <section id="skills" class="card fade-in-delay" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="flex-container">
+        <div class="skill-item pulse-on-hover" tabindex="0">HTML</div>
+        <div class="skill-item pulse-on-hover" tabindex="0">CSS</div>
+        <div class="skill-item pulse-on-hover" tabindex="0">JavaScript</div>
+      </div>
+    </section>
+
+        <!--Projects section with grid and slid-in animations-->
+        <section id="projects" class="card grid-container">
+            <!--Heading is visuallyhidden for screen readers only-->
+            <h2 id="projects-heading" class="visually-hidden">Projects</h2>
+            <div class="project slide-in-left">
+                <h3>Proj</h3>
+                <p>NAX</p>
+                <p>This Website!</p>
+            </div>
+            <div class="project slid-in-right">
+                <h3>ects</h3>
+                <p>Organize</p>
+                <p>That health app thing</p>
+            </div>
+        </section>
+
+        <!--Contact Form, with acessible labels and required fields-->
+        <section id="contact" class="card">
+            <h2 id="contact-heading">Contact Me</h2>
+            <form autocomplete="on">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Bigbooté" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="John@Bigbooté.com" required>
+
+                <button class="button"  type="submit">Send</button>
+                <button class="button secondary" type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Example overlay div, hidden by default (for modal or darken effect) -->
+  <div class="overlay hidden" aria-hidden="true"></div>
+
+    <!--Page footer with stuctured data for SEO-->
+    <footer role="contentinfo">
+        <p>&copy; 2025 Peter Cykana</p>
+        <script type="application/ld+json">
+             {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Your name",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "",
+        ""
+      ],
+      "jobTitle": "",
+      "description": ""
+    }
+        </script>
+
+    </footer>
+</body>
+</html>
