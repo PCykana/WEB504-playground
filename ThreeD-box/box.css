@@ -8,20 +8,20 @@ body {
 }
 
 #container  {
-    height: 100vh;
-    width: 500vw;
-    min-height: 600px;
-    min-width: 300px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    perspective: 500px;
+    height: 100vh; /* 100 percent of the view port*/
+    width: 50vw; /* 500 = 5x the view port, 50 = 1/2 the view port*/
+    min-height: 600px; /* sets a minimum pixel height*/
+    min-width: 300px; /* sets a minimum pixel widts*/
+    position: absolute; /* allows element to move around?*/
+    display: flex; /* everything in the container is flex*/
+    flex-direction: column; /*stacked vertically*/
+    align-items: center;    /* items will be centered horizontally*/
+    justify-content: center; /* content will be centered vertically*/
+    perspective: 500px; /* sets a camera distance from the item(3D model)*/
 }
 
 #box * {
-    width: 150px;
+    width: 150px; 
     height: 150px;
     position: absolute;
     margin: 0 auto;
