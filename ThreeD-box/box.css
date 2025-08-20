@@ -2,6 +2,7 @@ body {
     background-color: #262626;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     height: 100vh;
     min-height: 600px;
@@ -23,15 +24,18 @@ body {
 #box * {
     width: 150px; 
     height: 150px;
+    backface-visibility:visible;
     position: absolute;
     margin: 0 auto;
 }
 
 #box {
     margin-top: 200px;
+    transform-style: preserve-3d;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: skew 3s linear 0s infinite;
 }
 
 .face2 {
@@ -40,4 +44,44 @@ body {
 
 .face3 {
     transform: rotateX(90deg) translateZ(75px) translateY(-75px);
+}
+
+.face4{
+    transform: rotateX(90deg) translateZ(-75px) translateY(-75px);
+}
+
+.face5 {
+    transform: rotateY(90deg) translateZ(-75px) translateX(75px);
+}
+
+.face6 {
+    transform: rotateY(90deg) translateZ(75px) translateX(75px);
+}
+
+.color1{
+    background: linear-gradient(#ff00b7, #3c00ff);
+    opacity: 0.5;
+}
+.color2{
+    background: linear-gradient(#ff00b7, #3c00ff);
+    opacity: 0.5;
+}
+.color3{
+    background: linear-gradient(#ff00b7, #3c00ff);
+    opacity: 0.5;
+}
+
+@keyframes skew {
+    0% {
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+footer {
+    position:absolute;
+    bottom:0px;
+    margin: 2px auto 0 auto;
 }
