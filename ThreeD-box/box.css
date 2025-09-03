@@ -10,7 +10,7 @@ body {
 
 #container  {
     height: 100vh; /* 100 percent of the view port*/
-    width: 50vw; /* 500 = 5x the view port, 50 = 1/2 the view port*/
+    width: 100vw; /* 500 = 5x the view port, 50 = 1/2 the view port*/
     min-height: 600px; /* sets a minimum pixel height*/
     min-width: 300px; /* sets a minimum pixel widts*/
     position: absolute; /* allows element to move around?*/
@@ -21,16 +21,17 @@ body {
     perspective: 500px; /* sets a camera distance from the item(3D model)*/
 }
 
+
 #box * {
     width: 150px; 
     height: 150px;
     backface-visibility:visible;
     position: absolute;
-    margin: 0 auto;
+    margin: 0 auto auto;
 }
 
 #box {
-    margin-top: 200px;
+    margin-top: 275px;
     transform-style: preserve-3d;
     display: flex;
     align-items: center;
@@ -85,3 +86,4 @@ footer {
     bottom:0px;
     margin: 2px auto 0 auto;
 }
+
