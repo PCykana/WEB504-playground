@@ -1,0 +1,89 @@
+body {
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    min-height: 600px;
+}
+
+#container  {
+    height: 100vh; /* 100 percent of the view port*/
+    width: 100vw; /* 500 = 5x the view port, 50 = 1/2 the view port*/
+    min-height: 600px; /* sets a minimum pixel height*/
+    min-width: 300px; /* sets a minimum pixel widts*/
+    position: absolute; /* allows element to move around?*/
+    display: flex; /* everything in the container is flex*/
+    flex-direction: column; /*stacked vertically*/
+    align-items: center;    /* items will be centered horizontally*/
+    justify-content: center; /* content will be centered vertically*/
+    perspective: 500px; /* sets a camera distance from the item(3D model)*/
+}
+
+
+#box * {
+    width: 150px; 
+    height: 150px;
+    backface-visibility:visible;
+    position: absolute;
+    margin: 0 auto auto;
+}
+
+#box {
+    margin-top: 275px;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: skew 3s linear 0s infinite;
+}
+
+.face2 {
+    transform: translateZ(-150px);
+}
+
+.face3 {
+    transform: rotateX(90deg) translateZ(75px) translateY(-75px);
+}
+
+.face4{
+    transform: rotateX(90deg) translateZ(-75px) translateY(-75px);
+}
+
+.face5 {
+    transform: rotateY(90deg) translateZ(-75px) translateX(75px);
+}
+
+.face6 {
+    transform: rotateY(90deg) translateZ(75px) translateX(75px);
+}
+
+.color1{
+    background: linear-gradient(#ff00b7, #3c00ff);
+    opacity: 0.5;
+}
+.color2{
+    background: linear-gradient(#ff00b7, #3c00ff);
+    opacity: 0.5;
+}
+.color3{
+    background: linear-gradient(#ff00b7, #3c00ff);
+    opacity: 0.5;
+}
+
+@keyframes skew {
+    0% {
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+footer {
+    position:absolute;
+    bottom:0px;
+    margin: 2px auto 0 auto;
+}
+
